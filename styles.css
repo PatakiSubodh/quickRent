@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* Container should cover full height */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Take 100% of the viewport height */
+    padding: 20px;
+}
+
+/* Left container styling */
+.left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 100%; /* Ensures full height */
+}
+
+/* Right container styling */
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures full height */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.image-container:hover .overlay {
+    visibility: visible;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: lawngreen;
+}
+
+::selection {
+    color: black;
+    background: lawngreen;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: black;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+}
+
+.comp-name {
+    text-transform: uppercase;
+}
+
+.comp-name a {
+    color: #000;
+    text-decoration: none;
+}
+
+#comp-fname {
+    font-weight: 300;
+}
+
+#comp-lname {
+    font-weight: bolder;
+    color: lawngreen;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #000;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navbar-items a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(124,252,0,1) 100%);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-items a:hover::after {
+    width: 100%;
+}
+.navbar-buttons a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+#login {
+    padding: 5px 20px;
+}
+#login:hover {
+    /* background-color: lawngreen; */
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#signup {
+    padding: 5px 20px;
+    background-color: lawngreen;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+}
+#signup:hover {
+    box-shadow: none;
+}
+
+.container {
+    display: flex;
+    font-size: 20px;
+    height: 100vh;
+    margin-top: 60px;
+}
+
+.left-container, .right-container {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.left-container {
+    background-color: black;
+    color: white;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.right-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    grid-column: 2 / 3; 
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.right-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 18px; 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.description1 {
+    grid-row: 1 / 2; 
+    grid-column: 2 / 3;
+}
+
+.description2 {
+    grid-row: 2 / 3; 
+    grid-column: 1 / 2; 
+}
+
+#discover-us-btn {
+    color: #000;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    box-shadow: 5px 5px lawngreen;
+}
+
+#discover-us-btn:hover {
+    box-shadow: none;
+}
+
+.left-container-p {
+    font-size: 80px;
+    font-weight: 900;
+}
+
+#left-container-content span {
+    color: lawngreen;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); 
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(124, 252, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#footer-daily {
+    font-weight: 300;
+    background-color: lawngreen;
+}
+
+#footer-goods {
+    font-weight: bolder;
+    color: black;
+    background-color: lawngreen;
+}
+
+
+/* Ensure footer stays at the bottom */
+html, body {
+    height: 100%; /* Ensure the page takes full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Main content area */
+.container {
+    flex: 1; /* Allow the container to grow and take available space */
+}
+
+
+/* Container for the feature items */
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual feature item */
+.feature-item {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 0 10px;
+    border-radius: 8px;
+    height: 300px; /* Increased height of the cards */
+    transition: transform 0.3s ease;
+}
+
+/* Feature item hover effect */
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.icon {
+    font-size: 50px; /* Increased font size for the icon */
+    color: lawngreen; /* Lawngreen color for the icon */
+    margin-bottom: 15px;
+}
+
+/* Heading style */
+.feature-item h3 {
+    color: black; /* Lawngreen color for the heading */
+    font-size: 28px; /* Increased font size for the heading */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Paragraph text style */
+.feature-item p {
+    color: black; /* Black color for paragraph text */
+    font-size: 18px; /* Increased font size for the paragraph */
+    font-weight: 400;
+}
+
+/* Underline class for important words */
+.feature-item p u {
+    text-decoration: underline lawngreen;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin: 10px 0;
+        height: 250px; /* Adjusted height for mobile */
+    }
+
+    .icon {
+        font-size: 40px; /* Decreased icon size for mobile */
+    }
+
+    .feature-item h3 {
+        font-size: 24px; /* Slightly reduced heading size for mobile */
+    }
+
+    .feature-item p {
+        font-size: 16px; /* Reduced paragraph size for mobile */
+    }
+}
+
+
+
+/* Handle tablet screens */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%; /* Occupy full width */
+        text-align: justify; /* Justify text */
+    }
+
+    .right-container {
+        width: 100%; /* Make right-container take full width */
+        padding: 15px; /* Add padding */
+        box-sizing: border-box; /* Prevent overflow */
+    }
+
+    .left-container-p {
+        font-size: 60px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .navbar-items a, .navbar-buttons a {
+        padding: 12px 20px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    #discover-us-btn {
+        width: 100%; /* Ensure button is 100% width of the container */
+        padding: 15px; /* Add padding for better size */
+        text-align: center; /* Center text */
+        background-color: white; /* Button background color */
+        color: black; /* Text color */
+        border: 1px solid #ccc; /* Add border around the button */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        box-sizing: border-box; /* Ensure it fits within the box */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+}
+
+/* Handle smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the elements vertically */
+        height: auto; /* Allow container height to grow as needed */
+    }
+
+    .left-container {
+        width: 100%; /* Occupy full width */
+        text-align: justify; /* Justify text */
+        margin-bottom: 20px; /* Add space at the bottom */
+    }
+
+    .right-container {
+        width: 100%; /* Ensure right-container occupies full width */
+        padding: 15px; /* Add padding */
+        box-sizing: border-box; /* Prevent overflow */
+        display: flex;
+        flex-direction: column; /* Stack items in column layout */
+        align-items: center; /* Center items horizontally */
+        position: relative; /* Necessary for absolute positioning */
+        margin-bottom: 20px; /* Add space between image and other content */
+    }
+
+    .right-container .image-container {
+        width: 100%; /* Ensure image container takes full width */
+        height: 250px; /* Adjust height */
+        position: relative; /* Required for overlaying description */
+        border-radius: 10px; /* Round corners of the image container */
+        overflow: hidden; /* Prevent image overflow */
+        margin-bottom: 10px; /* Space between image containers */
+    }
+
+    .right-container .description {
+        display: none; /* Hide the description */
+    }
+
+    .right-container .image-container img {
+        width: 100%; /* Ensure the image occupies full container width */
+        height: 100%; /* Ensure the image takes full height of its container */
+        object-fit: cover; /* Ensure the image covers the container without distortion */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .right-container .image-container img:hover {
+        transform: scale(1.1); /* Zoom in on the image on hover */
+    }
+
+    .left-container-p {
+        font-size: 40px; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Add space between title and content */
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .navbar-items a, .navbar-buttons a {
+        padding: 10px;
+        font-size: 14px; /* Slightly smaller font size for navbar items */
+    }
+
+    .navbar-items a:hover, .navbar-buttons a:hover {
+        background-color: #f1f1f1; /* Light grey background on hover */
+        color: #007bff; /* Text color change on hover */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    }
+
+    #discover-us-btn {
+        width: 100%; /* Make button 100% width */
+        padding: 15px; /* Add padding */
+        text-align: center; /* Center button text */
+        background-color: white; /* Button background color */
+        color: black; /* Text color */
+        border: 1px solid #ccc; /* Add border around the button */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        box-sizing: border-box; /* Ensure it fits within the container */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating - QuickRent</title>
+    <link rel="stylesheet" href="/src/assets/styles/rating.css">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="/src/pages/catalogue.html">Catalogue</a>
+            <a href="/src/pages/rating.html" class="active">Rating</a>
+            <a href="/src/pages/discover.html">Discover Us</a>
+            <a href="/src/pages/contact.html">Contact Us</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="rating-container">
+            <div class="rating-box">
+                <h1>Rate Us</h1>
+                <p>We value your feedback! Please rate your experience with QuickRent and let us know how we can improve.</p>
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="rating">Rating</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="5" placeholder="Your comments here..."></textarea>
+
+                    <button type="submit" class="submit-button">Submit Rating</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 QuickRent. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - QuickRent</title>
+    <link rel="stylesheet" href="/src/assets/styles/catalogue.css">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu for Tablets and Mobile -->
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="/src/pages/catalogue.html" class="active">Catalogue</a>
+            <a href="/src/pages/rating.html">Rating</a>
+            <a href="/src/pages/discover.html">Discover Us</a>
+            <a href="/src/pages/contact.html">Contact Us</a>     
+            
+        </nav>
+
+    </header>
+    
+    <main>
+        <section class="catalogue-container">
+            
+            <div class="header">
+                <h1>Catalogue</h1>
+                <!-- Dropdown for product categories -->
+                <div class="dropdown">
+                    <button id="compare-btn" class="compare-btn" disabled>Compare</button>
+                    <button class="dropdown-btn">Select Product Category</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-category="laptops">Laptops</a>
+                        <a href="#" data-category="cameras">Cameras</a>
+                        <a href="#" data-category="gaming">Gaming Consoles</a>
+                    </div>
+                </div>
+
+                <!-- Comparison Button -->
+            </div>
+            
+            <div class="catalogue-grid">
+                <!-- Laptops -->
+                <div class="product-card" data-category="laptops">
+                    <img src="/src/assets/images/laptop1.jpg" alt="Laptop 1">
+                    <h2>Laptop 1</h2>
+                    <p class="price">$1000</p>
+                    <p class="description">Description for Laptop 1</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="laptops">
+                    <img src="/src/assets/images/laptop2.jpg" alt="Laptop 2">
+                    <h2>Laptop 2</h2>
+                    <p class="price">$1200</p>
+                    <p class="description">Description for Laptop 2</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="laptops">
+                    <img src="/src/assets/images/laptop3.jpg" alt="Laptop 3">
+                    <h2>Laptop 3</h2>
+                    <p class="price">$1500</p>
+                    <p class="description">Description for Laptop 3</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+            
+                <!-- Cameras -->
+                <div class="product-card" data-category="cameras">
+                    <img src="/src/assets/images/camera1.png" alt="Camera 1">
+                    <h2>Camera 1</h2>
+                    <p class="price">$800</p>
+                    <p class="description">Description for Camera 1</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="cameras">
+                    <img src="/src/assets/images/camera2.png" alt="Camera 2">
+                    <h2>Camera 2</h2>
+                    <p class="price">$1000</p>
+                    <p class="description">Description for Camera 2</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="cameras">
+                    <img src="/src/assets/images/camera3.png" alt="Camera 3">
+                    <h2>Camera 3</h2>
+                    <p class="price">$1300</p>
+                    <p class="description">Description for Camera 3</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+            
+                <!-- Gaming Consoles -->
+                <div class="product-card" data-category="gaming">
+                    <img src="/src/assets/images/console1.png" alt="Gaming Console 1">
+                    <h2>Gaming Console 1</h2>
+                    <p class="price">$300</p>
+                    <p class="description">Description for Gaming Console 1</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="gaming">
+                    <img src="/src/assets/images/console2.png" alt="Gaming Console 2">
+                    <h2>Gaming Console 2</h2>
+                    <p class="price">$400</p>
+                    <p class="description">Description for Gaming Console 2</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+                <div class="product-card" data-category="gaming">
+                    <img src="/src/assets/images/console3.png" alt="Gaming Console 3">
+                    <h2>Gaming Console 3</h2>
+                    <p class="price">$500</p>
+                    <p class="description">Description for Gaming Console 3</p>
+                    <a href="#" class="view-details">Rent gadget</a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 QuickRent. All rights reserved.</p>
+    </footer>
+
+    <script src="/src/components/dropdown_selection.js"></script>
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

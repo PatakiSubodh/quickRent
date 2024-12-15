@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url('/src/assets/images/doodad.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: left;
+    width: 300px;
+}
+
+.login-box h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+.login-box a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #7cfc00;
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+}
+
+.login-box a:hover {
+    box-shadow: none;
+}
