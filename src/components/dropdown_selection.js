@@ -21,8 +21,9 @@ dropdownLinks.forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
     const catalogueGrid = document.querySelector('.catalogue-grid');
+    const compareBtn = document.querySelector('#compare-btn'); // Compare button
+    const comparisonTable = document.querySelector('#comparison-table'); // Comparison table
 
     // Sample product data for different categories
     const products = {
@@ -55,15 +56,40 @@ document.addEventListener('DOMContentLoaded', function() {
         selectedProducts.forEach(product => {
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
+            productCard.setAttribute('data-category', category); // Add the category to the product card for filtering
+
             productCard.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
                 <p class="price">${product.price}</p>
                 <p class="description">${product.description}</p>
+                <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                 <a href="#" class="view-details">Rent gadget</a>
             `;
             catalogueGrid.appendChild(productCard);
         });
+    }
+
+    // Function to toggle select buttons visibility
+    compareBtn.addEventListener('click', function() {
+        const selectButtons = document.querySelectorAll('.select-btn');
+        selectButtons.forEach(button => {
+            button.style.display = button.style.display === 'none' ? 'block' : 'none'; // Toggle visibility
+        });
+    });
+
+    // Function to add the selected product description to the comparison table
+    function addToComparison(productName, productDescription) {
+        // Check if two products are already selected
+        if (comparisonTable.rows.length < 3) { // Rows include header row
+            const row = comparisonTable.insertRow();
+            const nameCell = row.insertCell(0);
+            const descriptionCell = row.insertCell(1);
+            nameCell.textContent = productName;
+            descriptionCell.textContent = productDescription;
+        } else {
+            alert("You can compare only 2 products at a time.");
+        }
     }
 
     // Add event listeners to the dropdown links
@@ -75,20 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initial catalogue load (default category)
-    updateCatalogue('laptops');
-});
-
-
-const compareButton = document.getElementById('compare-btn');
-dropdownLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default link behavior
-        const selectedCategory = event.target.getAttribute('data-category');
-
-        if (selectedCategory) {
-            compareButton.disabled = false; // Enable the button
-            compareButton.style.cursor = "pointer"; // Change the cursor to pointer
+    // Event listener for selecting products
+    catalogueGrid.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('select-btn')) {
+            const productCard = e.target.closest('.product-card');
+            const productName = productCard.querySelector('h2').textContent;
+            const productDescription = productCard.querySelector('.description').textContent;
+            addToComparison(productName, productDescription);
         }
     });
+
+    // Initial catalogue load (default category)
+    updateCatalogue('gaming');
 });

@@ -44,6 +44,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: calc(100vh - 60px);
 }
 
@@ -58,7 +59,7 @@ main {
 /* Header and Dropdown */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -68,30 +69,22 @@ main {
     color: black;
 }
 
-.dropdown {
-    position: absolute;
-    top: 40px;
-    right: 0;
-}
 
 .dropdown-btn {
-    padding: 10px 20px;
-    background-color: #7cfc00;
+    padding: 15px 30px;
     color: black;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
 }
 
 .dropdown-btn:hover {
-    background-color: #4caf50;
+    border: 2px solid black;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -160,8 +153,10 @@ main {
     margin-bottom: 15px;
 }
 
-.product-card .view-details {
-    display: inline-block;
+.view-details { 
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: center;
     padding: 10px 15px;
     background-color: #7cfc00;
     color: black;
@@ -171,13 +166,27 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.product-card .view-details:hover {
+.view-details:hover {
     background-color: #4caf50;
+    cursor: pointer;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.select-btn {
+    display: none;
+    padding: 10px 15px;
+    background-color: #626460;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
 /* Footer Styling */
@@ -202,12 +211,6 @@ footer {
 
     .product-card {
         width: 180px; /* Slightly smaller card size for tablets */
-    }
-
-    .dropdown {
-        position: relative;
-        top: 0;
-        right: auto;
     }
 
     .header {
@@ -343,19 +346,16 @@ footer {
 }
 
 .compare-btn {
-    background-color: #ccc; /* Disabled background */
+    
     color: #666; /* Disabled text color */
     padding: 10px 20px;
     margin-left: 10px;
     border: none;
     border-radius: 5px;
-    cursor: not-allowed; /* Disabled cursor */
 }
 
 .compare-btn:enabled {
-    border: 2px solid black;
-    padding: 10px 20px;
-    background-color: #7cfc00;
+    padding: 15px 30px;
     color: black;
     font-weight: bold;
     border-radius: 5px;
@@ -363,5 +363,77 @@ footer {
 }
 
 .compare-btn:hover {
-    background-color: #4caf50;
+    border: 2px solid black;
+}
+
+/* Table Styling */
+#comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#comparison-table th, #comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+#comparison-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#comparison-table td {
+    font-size: 0.95rem;
+}
+
+#comparison-table td:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#comparison-section {
+    margin-top: 20px;
+}
+
+/* Responsive Design for Tables */
+@media (max-width: 768px) {
+    #comparison-table th, #comparison-table td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    #comparison-table th {
+        font-size: 1rem;
+    }
+
+    #comparison-table td {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #comparison-table th, #comparison-table td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    #comparison-table th {
+        font-size: 0.9rem;
+    }
+
+    #comparison-table td {
+        font-size: 0.75rem;
+    }
 }
