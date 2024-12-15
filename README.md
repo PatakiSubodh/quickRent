@@ -1,5 +1,8 @@
 # QuickRent - Deployment README
 
+### Deployment Link:
+You can view the live version of the platform here: [QuickRent Deployment](https://quickrent-indol.vercel.app/) 
+
 ### Project Description
 The project, **QuickRent**, is a **web-based property rental platform** built using **plain HTML, CSS, and JavaScript**. It allows users to browse available rental properties, contact landlords, and explore detailed property listings.
 
@@ -37,20 +40,21 @@ If the project isn't displaying correctly:
 ## Features
 
 ### Hero Banner
-- [x] CTA button on home page
-- [x] Navbar with signup
+- [x] Added a CTA button on the home page.
+- [x] Included a navbar with a sign-up option.
 
 ### Features
-- [x] Highlight features like:
-  - [x] Wide variety
-  - [x] Affordable pricing
-  - [x] Quick delivery
+- [x] Highlighted key features such as:
+  - [x] Wide variety of gadgets available.
+  - [x] Affordable pricing for all rental plans.
+  - [x] Quick and reliable delivery.
 
 ### Gadget Listing
-- [ ] Display list of gadgets available with price
-- [ ] Comparison of features
-- [x] CTA to rent their gadgets for rent
+- [x] Displayed a list of available gadgets with their pricing.
+- [x] Provided a comparison of features for each gadget.
+- [x] Added a CTA button for users to rent gadgets.
 
 ### Contact Us
-- [x] Form with name, email, message
-- [x] Map of office location
+- [x] Created a form with fields for name, email, and message.
+- [x] Included a map to show the office location.
+
