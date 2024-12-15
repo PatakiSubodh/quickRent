@@ -29,18 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const products = {
         laptops: [
             { name: 'Laptop 1', price: '$1000', description: 'Description for Laptop 1', image: '/src/assets/images/laptop1.jpg' },
-            { name: 'Laptop 2', price: '$1200', description: 'Description for Laptop 2', image: '/src/assets/images/laptop2.jpg' },
-            { name: 'Laptop 3', price: '$1500', description: 'Description for Laptop 3', image: '/src/assets/images/laptop3.jpg' },
+            { name: 'Laptop 2', price: '$1200', description: 'Description for Laptop 2', image: '/src/assets/images/laptop3.jpg' },
+            { name: 'Laptop 3', price: '$1500', description: 'Description for Laptop 3', image: '/src/assets/images/laptop2.jpg' },
         ],
         cameras: [
             { name: 'Camera 1', price: '$800', description: 'Description for Camera 1', image: '/src/assets/images/camera1.png' },
-            { name: 'Camera 2', price: '$1000', description: 'Description for Camera 2', image: '/src/assets/images/camera2.png' },
-            { name: 'Camera 3', price: '$1300', description: 'Description for Camera 3', image: '/src/assets/images/camera3.png' },
+            { name: 'Camera 2', price: '$1000', description: 'Description for Camera 2', image: '/src/assets/images/camera3.png' },
+            { name: 'Camera 3', price: '$1300', description: 'Description for Camera 3', image: '/src/assets/images/camera2.png' },
         ],
         gaming: [
             { name: 'Gaming Console 1', price: '$300', description: 'Description for Gaming Console 1', image: '/src/assets/images/console1.png' },
-            { name: 'Gaming Console 2', price: '$400', description: 'Description for Gaming Console 2', image: '/src/assets/images/console2.png' },
-            { name: 'Gaming Console 3', price: '$500', description: 'Description for Gaming Console 3', image: '/src/assets/images/console3.png' },
+            { name: 'Gaming Console 2', price: '$400', description: 'Description for Gaming Console 2', image: '/src/assets/images/console3.png' },
+            { name: 'Gaming Console 3', price: '$500', description: 'Description for Gaming Console 3', image: '/src/assets/images/console2.png' },
         ]
     };
 
