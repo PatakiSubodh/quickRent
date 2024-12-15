@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'SUSE', sans-serif;
+    text-align: center;
+    padding: 0;
+}
+
+h1 > span {
+    font-size: 48px;
+    color: #7cfc00;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+a > p {
+    font-size: 4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+#comp-fname {
+    font-weight: 300;
+}
+
+#comp-lname {
+    font-weight: bolder;
+    color: lawngreen;
+}

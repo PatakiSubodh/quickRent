@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="price">${product.price}</p>
                 <p class="description">${product.description}</p>
                 <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
-                <a href="#" class="view-details">Rent gadget</a>
+                <a href="/src/pages/success.html" class="view-details">Rent gadget</a>
             `;
             catalogueGrid.appendChild(productCard);
         });
