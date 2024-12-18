@@ -8,14 +8,18 @@
 
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Container should cover full height */
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh; /* Take 100% of the viewport height */
     padding: 20px;
+    font-size: 20px;
+    margin-top: 60px;
+    height: 100vh; 
 }
 
 /* Left container styling */
@@ -47,7 +51,6 @@
 
 .overlay {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -83,7 +86,7 @@
     height: 60px;
     background-color: rgba(255, 255, 255, 0.8); 
     color: black;
-    z-index: 99;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -154,13 +157,6 @@
 }
 #signup:hover {
     box-shadow: none;
-}
-
-.container {
-    display: flex;
-    font-size: 20px;
-    height: 100vh;
-    margin-top: 60px;
 }
 
 .left-container, .right-container {
@@ -272,6 +268,7 @@
 }
 
 footer {
+    position: fixed;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
@@ -279,32 +276,6 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
-
-#footer-daily {
-    font-weight: 300;
-    background-color: lawngreen;
-}
-
-#footer-goods {
-    font-weight: bolder;
-    color: black;
-    background-color: lawngreen;
-}
-
-
-/* Ensure footer stays at the bottom */
-html, body {
-    height: 100%; /* Ensure the page takes full height */
-    margin: 0; /* Remove default margin */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-}
-
-/* Main content area */
-.container {
-    flex: 1; /* Allow the container to grow and take available space */
-}
-
 
 /* Container for the feature items */
 .feature-container {
@@ -315,6 +286,7 @@ html, body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
 }
 
 /* Individual feature item */
@@ -326,7 +298,8 @@ html, body {
     text-align: center;
     flex: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgb(124, 252, 0, 0.2);
+    width: 90%;
     margin: 0 10px;
     border-radius: 8px;
     height: 300px; /* Increased height of the cards */
@@ -390,8 +363,6 @@ html, body {
         font-size: 16px; /* Reduced paragraph size for mobile */
     }
 }
-
-
 
 /* Handle tablet screens */
 @media (max-width: 1024px) {

@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rating - QuickRent</title>
     <link rel="stylesheet" href="/src/assets/styles/rating.css">
+    <link rel="stylesheet" href="/src/assets/styles/catalogue.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/src/assets/styles/hamburger.css">
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    
+    <!-- navbar.html -->
+    <div class="navbar">
+        <div class="comp-name">
+            <a href="/index.html">
+                <p><span id="comp-fname">Quick</span><span id="comp-lname">Rent</span></p>
+            </a>
+        </div>
         <nav>
             <a href="../../index.html">Home</a>
             <a href="/src/pages/catalogue.html">Catalogue</a>
             <a href="/src/pages/rating.html" class="active">Rating</a>
             <a href="/src/pages/discover.html">Discover Us</a>
-            <a href="/src/pages/contact.html">Contact Us</a>
+            <a href="/src/pages/contact.html">Contact Us</a>     
         </nav>
-    </header>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <a href="/index.html">Home</a>
+        <a href="/src/pages/catalogue.html">Catalogue</a>
+        <a href="/src/pages/rating.html">Rating</a>
+            <a href="/src/pages/discover.html">Discover Us</a>
+            <a href="/src/pages/contact.html">Contact Us</a>   
+    </div>
     
     <main>
         <section class="rating-container">
@@ -52,5 +74,7 @@
     <footer>
         <p>&copy; 2024 QuickRent. All rights reserved.</p>
     </footer>
+    
+    <script src="/src/components/hamburger.js"></script>
 </body>
 </html>

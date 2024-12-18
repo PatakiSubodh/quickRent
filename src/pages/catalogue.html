@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogue - QuickRent</title>
     <link rel="stylesheet" href="/src/assets/styles/catalogue.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/src/assets/styles/hamburger.css">
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Hamburger Menu for Tablets and Mobile -->
-        <div class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
+
+    <!-- navbar.html -->
+    <div class="navbar">
+        <div class="comp-name">
+            <a href="/index.html">
+                <p><span id="comp-fname">Quick</span><span id="comp-lname">Rent</span></p>
+            </a>
         </div>
-        
         <nav>
             <a href="../../index.html">Home</a>
             <a href="/src/pages/catalogue.html" class="active">Catalogue</a>
@@ -23,10 +25,21 @@
             <a href="/src/pages/discover.html">Discover Us</a>
             <a href="/src/pages/contact.html">Contact Us</a>     
         </nav>
-    </header>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <a href="/index.html">Home</a>
+        <a href="/src/pages/catalogue.html">Catalogue</a>
+        <a href="/src/pages/rating.html">Rating</a>
+            <a href="/src/pages/discover.html">Discover Us</a>
+            <a href="/src/pages/contact.html">Contact Us</a>   
+    </div>
     
     <main>
-
         <h1>Catalogue</h1>
         <div class="header">
             <!-- Dropdown for product categories -->
@@ -47,25 +60,26 @@
                     <!-- Laptops -->
                     <div class="product-card" data-category="laptops">
                         <img src="/src/assets/images/laptop1.jpg" alt="Laptop 1">
-                        <h2>Laptop 1</h2>
-                        <p class="price">$1000</p>
-                        <p class="description">Description for Laptop 1</p>
+                        <h2>Macbook M1 Air</h2>
+                        <p class="price">&#8377 3000</p>
+                        <p class="description">Sleek, lightweight, and powered by the Apple M1 chip for performance and battery life.
+                        </p>
                         <button class="select-btn">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="laptops">
                         <img src="/src/assets/images/laptop3.jpg" alt="Laptop 2">
-                        <h2>Laptop 2</h2>
-                        <p class="price">$1200</p>
-                        <p class="description">Description for Laptop 2</p>
+                        <h2>HP Pavillion</h2>
+                        <p class="price">&#8377 1500</p>
+                        <p class="description">Versatile and reliable, perfect for everyday computing and multimedia tasks.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="laptops">
                         <img src="/src/assets/images/laptop2.jpg" alt="Laptop 3">
-                        <h2>Laptop 3</h2>
-                        <p class="price">$1500</p>
-                        <p class="description">Description for Laptop 3</p>
+                        <h2>Rog Strix G15</h2>
+                        <p class="price">&#8377 2500</p>
+                        <p class="description">High-performance gaming laptop with stunning visuals and seamless gameplay.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
@@ -73,25 +87,26 @@
                     <!-- Cameras -->
                     <div class="product-card" data-category="cameras">
                         <img src="/src/assets/images/camera1.png" alt="Camera 1">
-                        <h2>Camera 1</h2>
-                        <p class="price">$800</p>
-                        <p class="description">Description for Camera 1</p>
+                        <h2>Sony a7 III</h2>
+                        <p class="price">&#8377 8000</p>
+                        <p class="description">Professional-grade mirrorless camera with exceptional image quality and advanced features.
+                        </p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="cameras">
                         <img src="/src/assets/images/camera3.png" alt="Camera 2">
-                        <h2>Camera 2</h2>
-                        <p class="price">$1000</p>
-                        <p class="description">Description for Camera 2</p>
+                        <h2>Canon EOS 6D</h2>
+                        <p class="price">&#8377 10000</p>
+                        <p class="description">Full-frame DSLR for stunning photos and videos with robust build quality.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="cameras">
                         <img src="/src/assets/images/camera2.png" alt="Camera 3">
-                        <h2>Camera 3</h2>
-                        <p class="price">$1300</p>
-                        <p class="description">Description for Camera 3</p>
+                        <h2>Sony Alpha</h2>
+                        <p class="price">&#8377 13000</p>
+                        <p class="description">Compact and versatile camera for photography enthusiasts and professionals alike.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
@@ -99,25 +114,25 @@
                     <!-- Gaming Consoles -->
                     <div class="product-card" data-category="gaming">
                         <img src="/src/assets/images/console1.png" alt="Gaming Console 1">
-                        <h2>Gaming Console 1</h2>
-                        <p class="price">$300</p>
-                        <p class="description">Description for Gaming Console 1</p>
+                        <h2>Xbox controller zen5</h2>
+                        <p class="price">&#8377 300</p>
+                        <p class="description">Ergonomic design with responsive controls for an immersive gaming experience.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="gaming">
                         <img src="/src/assets/images/console3.png" alt="Gaming Console 2">
-                        <h2>Gaming Console 2</h2>
-                        <p class="price">$400</p>
-                        <p class="description">Description for Gaming Console 2</p>
+                        <h2>Nintendo Switch</h2>
+                        <p class="price">&#8377 400</p>
+                        <p class="description">Hybrid gaming console for ultimate portability and fun multiplayer experiences.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
                     <div class="product-card" data-category="gaming">
                         <img src="/src/assets/images/console2.png" alt="Gaming Console 3">
-                        <h2>Gaming Console 3</h2>
-                        <p class="price">$500</p>
-                        <p class="description">Description for Gaming Console 3</p>
+                        <h2>Xbox controller zen3</h2>
+                        <p class="price">&#8377 500</p>
+                        <p class="description">Precision-crafted for seamless gameplay and maximum comfort during long sessions.</p>
                         <button class="select-btn" style="display: none;">Select</button> <!-- Hidden initially -->
                         <a href="/src/pages/success.html" class="view-details">Rent gadget</a> <!-- Rent button -->
                     </div>
@@ -152,5 +167,7 @@
             nav.classList.toggle('show');
         });
     </script>
+    
+    <script src="/src/components/hamburger.js"></script>
 </body>
 </html>

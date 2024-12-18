@@ -40,6 +40,7 @@ nav a.active {
 
 /* Main Content */
 main {
+    margin-top: 60px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -61,7 +62,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .catalogue-container h1 {
@@ -69,6 +70,18 @@ main {
     color: black;
 }
 
+.compare-btn {
+    padding: 15px 30px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.compare-btn:hover {
+    border: 2px solid black;
+}
 
 .dropdown-btn {
     padding: 15px 30px;
@@ -206,12 +219,9 @@ footer {
 @media (max-width: 768px) {
     .catalogue-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px; /* Added gap for better spacing */
+        gap: 10px; /* Added gap for better spacing */
     }
 
-    .product-card {
-        width: 180px; /* Slightly smaller card size for tablets */
-    }
 
     .header {
         flex-direction: column;
@@ -219,6 +229,11 @@ footer {
     }
 
     .dropdown-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .compare-btn {
         width: 100%;
         margin-top: 10px;
     }
@@ -269,6 +284,11 @@ footer {
     }
 
     .dropdown-btn {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .compare-btn {
         width: 100%;
         padding: 12px 16px;
     }
@@ -334,7 +354,7 @@ footer {
 @media (max-width: 768px) {
     .catalogue-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for screens between 480px and 768px */
-        gap: 15px;  /* Adjusted gap for better spacing */
+        gap: 10px;  /* Adjusted gap for better spacing */
     }
 }
 
@@ -343,27 +363,6 @@ footer {
         grid-template-columns: 1fr; /* 1 column for screens below 480px */
         gap: 20px; /* Add gap between product cards */
     }
-}
-
-.compare-btn {
-    
-    color: #666; /* Disabled text color */
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.compare-btn:enabled {
-    padding: 15px 30px;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.compare-btn:hover {
-    border: 2px solid black;
 }
 
 /* Table Styling */
