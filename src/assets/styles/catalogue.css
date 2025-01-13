@@ -436,3 +436,8 @@ footer {
         font-size: 0.75rem;
     }
 }
+
+
+#comparison-container {
+    margin: 3rem 0 6rem 0;
+}
